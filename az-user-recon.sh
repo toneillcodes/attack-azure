@@ -37,6 +37,10 @@ fi
 timestamp=`date +"%Y%m%d-%H%M%S"`
 format=xml
 
+echo "Collecting tenant info..."
+tenantid=$(curl -s https://login.microsoftonline.com/$domain/v2.0/.well-known/openid-configuration | cut -d "\"" -f 4 | cut -d "/" -f 4)
+echo "TenantID=$tenantid" | tee -a az-recon-$domain-$timestamp.txt
+
 echo "Collecting realm info..."
 realminfo=$(curl -s "https://login.microsoftonline.com/getuserrealm.srf?login=$domain&$format=1")
 touch az-recon-$domain-$timestamp.txt
@@ -55,10 +59,6 @@ if [ $namespacetype == "Federated" ]; then
         stsauthurl=$(echo $realminfo | grep -oE '<STSAuthURL>(.*)<\/STSAuthURL>' | cut -d "><" -f 3)
         echo "STSAuthURL=$stsauthurl" | tee -a az-recon-$domain-$timestamp.txt
 fi
-
-echo "Collecting tenant info..."
-tenantid=$(curl -s https://login.microsoftonline.com/$domain/v2.0/.well-known/openid-configuration | cut -d "\"" -f 4 | cut -d "/" -f 4)
-echo "TenantID=$tenantid" | tee -a az-recon-$domain-$timestamp.txt
 
 if [ $namespacetype == "Managed" ]; then
 	if [ -z $username ]; then
