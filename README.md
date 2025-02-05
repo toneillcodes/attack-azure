@@ -1,3 +1,3 @@
 # attack-az
 Offensive tools, tactics and research on the Azure/Entra platform.
-- azrecon.sh: script to enumerate an Azure domain
+- [azrecon.sh](https://github.com/toneillcodes/attack-az/blob/main/azrecon.sh): script to enumerate an Azure domain
