@@ -1,5 +1,5 @@
 # Azure Authentication
-- CLI
+- [CLI](https://github.com/toneillcodes/attack-azure/blob/main/authentication/azure-cli-authentication.md)
 - Web endpoints
 
 ## Multiple Methods
