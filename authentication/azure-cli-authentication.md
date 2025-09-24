@@ -11,8 +11,11 @@ Get-AzContext
 ```
 ### Using a UPN and Password
 ```
-$credentials = (New-Object -TypeName "System.Management.Automation.PSCredential" -ArgumentList "someuser@domain.onmicrosoft.com", (ConvertTo-SecureString -String "WAh00000Vjo" -AsPlainText -Force))
-Connect-AzAccount -Tenant 2b0000c2-0000-0000-943b-0000ffc1a00b -Credential $credentials
+$username = "someuser@domain.onmicrosoft.com"
+$passowrd = "WAh00000Vjo"
+$tenantId = "2b7a41c2-..."
+$credentials = (New-Object -TypeName "System.Management.Automation.PSCredential" -ArgumentList $username, (ConvertTo-SecureString -String $password -AsPlainText -Force))
+Connect-AzAccount -Tenant $tenantId -Credential $credentials
 ```
 
 ### Using a Service Principal and Secret 
