@@ -1,5 +1,5 @@
 # Attack Azure
-Offensive tools, tactics and research on the Azure (Entra) platform.
+Offensive tools, tactics and research for Azure (Entra).
 
 > [!CAUTION]
 > Disclaimer: All code and techniques are intended only for use on systems that you are legally authorized to access.
