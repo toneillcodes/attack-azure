@@ -1,5 +1,13 @@
 # Attack Azure
-Offensive tools, tactics and research on the Azure/Entra platform.
-- [azrecon.sh](https://github.com/toneillcodes/attack-azure/blob/main/recon/azrecon/azrecon.sh): External pentesting/red team tool to enumerate domain properties and user accounts
-- Azure Persistence Methods: research into post-compromise methods
-- More
+Offensive tools, tactics and research on the Azure (Entra) platform.
+## Table of Contents
+- Authentication
+- Recon
+  - [azrecon.sh](https://github.com/toneillcodes/attack-azure/blob/main/recon/azrecon/azrecon.sh): Enumerate domain properties and user accounts
+- Attacks
+  - Password Spray 
+- Persistence
+  - Accounts
+  - OAuth Applications
+  - Function Apps
+  - Logic Apps
