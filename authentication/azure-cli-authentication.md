@@ -12,7 +12,7 @@ Get-AzContext
 ### Using a UPN and Password
 ```
 $username = "someuser@domain.onmicrosoft.com"
-$passowrd = "WAh00000Vjo"
+$password = "WAh00000Vjo"
 $tenantId = "2b7a41c2-..."
 $credentials = (New-Object -TypeName "System.Management.Automation.PSCredential" -ArgumentList $username, (ConvertTo-SecureString -String $password -AsPlainText -Force))
 Connect-AzAccount -Tenant $tenantId -Credential $credentials
